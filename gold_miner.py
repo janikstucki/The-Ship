@@ -1,7 +1,7 @@
 import requests
 import time
 
-mining_coordinates = {"x": -9660, "y": 20471}  # Uran Stone
+mining_coordinates = {"x": 50000, "y": 76540}  # Uran Stone
 station_name = "Core Station"
 station_coordinates = {"x": 0, "y": 0}
 
@@ -59,8 +59,8 @@ while True:
         resources = storage["resources"]
         gold = resources.get("GOLD", 0)
         if gold > 0:
-            requests.post("http://10.255.255.254:2011/sell", json={"station": station_name, "what": "GOLD", "amount": gold - 1})
-            print("Sell Gold:", gold - 1)
+            requests.post("http://10.255.255.254:2011/sell", json={"station": station_name, "what": "GOLD", "amount": gold})
+            print("Sell Gold:", gold)
 
         for res in ["STONE", "IRON", "PLATIN"]:
             requests.post("http://10.255.255.254:2011/sell", json={"station": station_name, "what": res, "amount": 120})

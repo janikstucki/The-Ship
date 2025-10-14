@@ -3,8 +3,8 @@ import requests
 url = "http://10.255.255.254:2009/set_target"
 data = {
     "target": {
-        "x":  -10000.0 ,
-        "y": 20500.0
+        "x":  -21500.0 ,
+        "y": 36500.0
     }
 }
 
@@ -12,8 +12,6 @@ response = requests.post(url, json=data)
 
 print(response.status_code)
 print(response.json())
-
-
 
 
 

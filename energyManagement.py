@@ -1,14 +1,13 @@
 import requests
 
 data = {
-  "scanner": 1,
   "thruster_back": 1,
   "thruster_front": 1,
   "thruster_bottom_left": 1,
   "thruster_front_right": 1,
   "thruster_bottom_right": 1,
-  "thruster_front_left": 0,
-  "laser": 1, 
+  "thruster_front_left": 1,
+  "laser": 0, 
   "nuclear_reactor": 0, 
   "subspace_tachyon_scanner": 0,
   "sensor_atomic_field": 0,
@@ -17,8 +16,11 @@ data = {
   "sensor_plasma_radiation": 0,
   "laser_amplifier": 0,
   "cargo_bot": 1, 
+  "scanner": 1,
   "scanner": 0,
-  "shield_generator": 1
+  "shield_generator": 1,
+  "sensor_void_energy": 1,
+  "analyzer_alpha": 1,
 }
 
 
