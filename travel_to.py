@@ -29,7 +29,6 @@ print(response.json())
 # Arakrock 		-13665/-15380
 # Illume Colony		600/600
 # Nuku Station 		-85936/-83194 
-# Station A
 # Aurora Station 		-11000/-11000
 # Station 12-B 		-10271/18765
 

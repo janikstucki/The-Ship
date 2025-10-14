@@ -1,7 +1,7 @@
 import requests
 import time
 
-mining_coordinates = {"x": 50000, "y": 76540}  # Uran Stone
+mining_coordinates = {"x": -21666, "y": 36669}  # Uran Stone
 station_name = "Core Station"
 station_coordinates = {"x": 0, "y": 0}
 
@@ -23,7 +23,7 @@ while True:
 
     # 2️⃣ Mining starten
     free_storage = get_storage()["hold_free"]
-    mining_angle = 350
+    mining_angle = 200
     last_activation = 0
 
     while free_storage > 0:
@@ -34,13 +34,13 @@ while True:
             print("Laser aktiviert:", laser_response.status_code)
             last_activation = time.time()
 
-        # Mining-Status prüfen
-        state_resp = requests.get("http://10.255.255.254:2018/state").json()
-        if not state_resp["is_mining"]:
-            mining_angle += 10
-            if mining_angle == 360:
-                mining_angle = 0
-            print("Kein Mining – Winkel geändert auf", mining_angle)
+        # # Mining-Status prüfen
+        # state_resp = requests.get("http://10.255.255.254:2018/state").json()
+        # if not state_resp["is_mining"]:
+        #     mining_angle += 10
+        #     if mining_angle == 360:
+        #         mining_angle = 0
+        #     print("Kein Mining – Winkel geändert auf", mining_angle)
 
         free_storage = get_storage()["hold_free"]
 
