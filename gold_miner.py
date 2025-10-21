@@ -1,7 +1,7 @@
 import requests
 import time
 
-mining_coordinates = {"x": -21470, "y": 36500}  # Uran Stone
+mining_coordinates = {"x": -95502, "y": -90800}  # Uran Stone
 station_name = "Core Station"
 station_coordinates = {"x": 0, "y": 0}
 
@@ -23,7 +23,7 @@ while True:
 
     # 2️⃣ Mining starten
     free_storage = get_storage()["hold_free"]
-    mining_angle = 200
+    mining_angle = 320
     last_activation = 0
 
     while free_storage > 0:
