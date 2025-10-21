@@ -1,6 +1,7 @@
 import pika
 import json
 import requests
+import time
 
 # Reuse HTTP session for speed
 session = requests.Session()
@@ -25,7 +26,7 @@ def callback(ch, method, properties, body):
         return
 
     for station in data:
-        if station.get("name") == "Captain Morris":
+        if station.get("name") == "Xyron Vex":
             x = station["pos"]["x"]
             y = station["pos"]["y"]
             print(f"🎯 -> x: {x}, y: {y}")
@@ -33,6 +34,7 @@ def callback(ch, method, properties, body):
             try:
                 resp = session.post(url, json={"target": {"x": x, "y": y}}, timeout=0.2)
                 print(resp.status_code)
+                time.sleep(3)
             except requests.RequestException as e:
                 print("Post error:", e)
 

@@ -2,7 +2,7 @@ import requests
 
 url = "http://10.255.255.254:2011/sell"
 
-data = {"station": "Core Station", "what": "IRON", "amount": 24}
+data = {"station": "Nuku Station", "what": "Nuclear_Waste", "amount": 112}
 
 response = requests.post(url, json=data)
 

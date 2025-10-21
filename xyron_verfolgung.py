@@ -14,7 +14,7 @@ target_url = "http://10.255.255.254:2009/set_target"
  
 def follow_station(station_data):
     for obj in station_data:
-        if obj.get('name') == 'Captain Morris':  
+        if obj.get('name') == 'Xyron Vex':  
             position = obj['pos']
             x = position['x']
             y = position['y']
