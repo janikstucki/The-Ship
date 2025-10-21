@@ -3,7 +3,7 @@ import requests
 url = "http://10.255.255.254:2009/set_target"
 data = {
     "target": {
-    "x": -53961, "y": -44627
+    "x": -82599, "y": 36300
     }
 }
 

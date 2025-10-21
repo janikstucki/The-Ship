@@ -1,30 +1,6 @@
 import requests
 
 
-# data = {
-#   "thruster_back": 0,
-#   "thruster_front": 0,
-#   "thruster_bottom_left": 0,
-#   "thruster_front_right": 0,
-#   "thruster_bottom_right": 0,
-#   "thruster_front_left": 0,
-#   "laser": 0, 
-#   "nuclear_reactor": 0, 
-#   "subspace_tachyon_scanner": 0,
-#   "sensor_atomic_field": 0,
-#   "matter_stabilizer": 0,
-#   "jumpdrive": 0,
-#   "sensor_plasma_radiation": 0,
-#   "laser_amplifier": 0,
-#   "cargo_bot": 0, 
-#   "scanner": 0,
-#   "scanner": 0,
-#   "shield_generator": 1,
-#   "sensor_void_energy": 1,
-#   "analyzer_alpha": 0,
-#   "analyzer_beta": 1,
-# }
-
 data = {
   "thruster_back": 2,
   "thruster_front": 1,
@@ -42,14 +18,14 @@ data = {
   "laser_amplifier": 0,
   "cargo_bot": 1, 
   "scanner": 1,
-  "shield_generator": 1,
+  "shield_generator": 0,
   "sensor_void_energy": 1,
   "sensor_antimatter": 1,
-  "analyzer_gamma": 1,
+  "analyzer_gamma": 0,
   "subspace_tachyon_scanner": 1,
   "sensor_atomic_field": 1,
   "matter_stabilizer": 1,
-  "jumpdrive": 1,
+  "jumpdrive": 0,
 }
 
 
@@ -77,30 +53,11 @@ data = {
 #   "subspace_tachyon_scanner": 0,
 #   "sensor_atomic_field": 1,
 #   "matter_stabilizer": 1,
-#   "jumpdrive": 1,
+#   "jumpdrive": 0.5,
 # }
 
 
 
-# data = {
-#   "scanner": 0,
-#   "thruster_back": 0,
-#   "thruster_front": 0,
-#   "thruster_bottom_left": 0,
-#   "thruster_front_right": 0,
-#   "thruster_bottom_right": 0,
-#   "thruster_front_left": 0,
-#   "laser": 1, 
-#   "nuclear_reactor": 0, 
-#   "subspace_tachyon_scanner": 0,
-#   "sensor_atomic_field": 0,
-#   "matter_stabilizer": 0,
-#   "jumpdrive": 0,
-#   "sensor_plasma_radiation": 0,
-#   "laser_amplifier": 1,
-#   "cargo_bot" : 0,
-#   "sensor_plasma_radiation": 1
-# }
 
 response = requests.put("http://10.255.255.254:2032/limits", json=data)
 

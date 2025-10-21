@@ -10,7 +10,7 @@ try:
     jump_to_method = client.get_node("ns=0;i=20002")  # JumpTo Methode
 
     # 3. Methode aufrufen: x=10, y=20 z.B.
-    result = jumpdrive.call_method(jump_to_method, -20000, 36375)
+    result = jumpdrive.call_method(jump_to_method, -20000, 0)
 
     print("Sprung erfolgreich?", result)
 
