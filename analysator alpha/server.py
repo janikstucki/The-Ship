@@ -17,13 +17,13 @@ class SensorVoidEnergyServer(api_pb2_grpc.SensorVoidEnergyServerServicer):
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     api_pb2_grpc.add_SensorVoidEnergyServerServicer_to_server(SensorVoidEnergyServer(), server)
-    server.add_insecure_port('[::]:2102')  # Listening on port 2102
+    server.add_insecure_port('[::]:2102')  
     server.start()
     print("Server is running on port 2102...")
     
     try:
         while True:
-            time.sleep(86400)  # Keep the server alive
+            time.sleep(86400)  
     except KeyboardInterrupt:
         server.stop(0)
 

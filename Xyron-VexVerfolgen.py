@@ -32,13 +32,13 @@ def callback(ch, method, properties, body):
             print(f"🎯 -> x: {x}, y: {y}")
 
             try:
-                resp = session.post(url, json={"target": {"x": x, "y": y}}, timeout=0.2)
+                resp = session.post(url, json={"target": {"x": x, "y": y}}, timeout=0.2) 
                 print(resp.status_code)
                 time.sleep(3)
             except requests.RequestException as e:
                 print("Post error:", e)
 
-# use basic_consume instead of blocking consume loop
+
 channel.basic_consume(queue=queue_name, on_message_callback=callback, auto_ack=True)
 
 print("⚡ Listening...")
