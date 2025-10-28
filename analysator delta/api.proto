@@ -1,1 +1,23 @@
-"computer1->computer0: my time is 0: 33, 1: 39 ---DETECTED BUG---"
+syntax = "proto3";
+
+package api.unsafe.analyzer_delta;
+
+service AnalyzerDeltaEndpoint {
+    rpc read_continuously(Void) returns (stream Data);
+}
+
+message Void {
+}
+
+message Data {
+    message NewtonDepthData {
+        string hex = 1;
+    }
+    message SubspaceTachyonScannerData {
+        string hex = 1;
+    }
+    oneof data {
+        NewtonDepthData            newton_depth = 1;
+        SubspaceTachyonScannerData tachyon_data = 2;
+    };
+}

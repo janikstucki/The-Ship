@@ -1,7 +1,7 @@
 import requests
 import time
 
-mining_coordinates = {"x": -95502, "y": -90800}  # Uran Stone
+mining_coordinates = {"x": -95340, "y": -90740}  # Uran Stone
 station_name = "Core Station"
 station_coordinates = {"x": 0, "y": 0}
 
